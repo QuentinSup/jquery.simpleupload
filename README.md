@@ -17,9 +17,7 @@ Simple upload is a Jquery plugin, so simply need jQuery to work ;)
 
 ## Usage
 
-SimpleUpload provide 
-
-### Initialize
+### Initialize with DIV
 
 Locate a DIV into your html page
 
@@ -29,7 +27,45 @@ Locate a DIV into your html page
 
 Use jQuery selector to initialize
 ```javascript
-$('#simpleuploader').simpleupload();
+$('#simpleuploader').simpleupload(options);
+```
+
+### Initialize with INPUT FILE
+
+Locate a INPUT type file into your html page
+
+```html
+<input type="file" id="simpleuploader" />
+```
+
+Use jQuery selector to initialize
+```javascript
+$('#simpleuploader').simpleupload(options);
+```
+
+
+### Initialize with IMG
+
+Locate a IMG into your html page.
+Notice that in this way, the plugin will auto set options :
+* dialogAcceptFiles : if not set, will be initialized with 'image/*'
+* authorizedExtensions : if no set, will be initialized with 'png,jpg,jpeg'
+
+Plugin will also use the IMG to preview files (only if previewImage option is not set)
+
+```html
+<img id="simpleuploader" />
+```
+
+Use jQuery selector to initialize
+```javascript
+$('#simpleuploader').simpleupload(options);
+```
+
+### Get SimpleUpload object (after initialization)
+
+```javascript
+var o = $('#simpleuploader').simpleupload();
 ```
 
 ## Options
@@ -108,7 +144,7 @@ Default is 10MB.
 
 ```javascript
 $('#simpleuploader').simpleupload({
-  dialogAcceptFiles: 'image/*' // Only images files will appear
+  fileMaxSize: 2 * 2048 // 2MB
 });
 ```
 
@@ -133,5 +169,5 @@ $('#simpleuploader').simpleupload({
 * onUpload
 * onUploadProgress
 * onUploadComplete
-* onServerReadyStateChang
+* onServerReadyStateChange
 * onAppend
