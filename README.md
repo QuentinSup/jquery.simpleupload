@@ -7,7 +7,7 @@ Simple upload plugin for JQuery
 * Multiple options and events
 
 ## Pre-requisite
-Simple upload is a Jquery plugin, so need jQuery to work.
+Simple upload is a Jquery plugin, so simply need jQuery to work ;)
 
 ## Install
 
