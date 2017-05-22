@@ -1,5 +1,6 @@
 ﻿/*!
 * jQuery SimpleUpload
+* QuentinSup https://github.com/QuentinSup/jquery.simpleupload/edit/master/jquery.simpleupload.js
 * 1.0.2
 */
 (function($) {
