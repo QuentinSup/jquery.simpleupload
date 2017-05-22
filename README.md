@@ -1,10 +1,13 @@
 # jquery.simpleupload
-Simple upload plugin for JQuery
+Simple upload plugin for JQuery.
 
 * Compatible with usual dialog to select file
 * Drag&Drop
 * Allow preview
 * Multiple options and events
+* Debug trace mode
+
+Use with jQuery selector, or throught SimpleUpload class
 
 ## Pre-requisite
 Simple upload is a Jquery plugin, so simply need jQuery to work ;)
@@ -43,7 +46,6 @@ Use jQuery selector to initialize
 $('#simpleuploader').simpleupload(options);
 ```
 
-
 ### Initialize with IMG
 
 Locate a IMG into your html page.
@@ -60,6 +62,19 @@ Plugin will also use the IMG to preview files (only if previewImage option is no
 Use jQuery selector to initialize
 ```javascript
 $('#simpleuploader').simpleupload(options);
+```
+
+### Initialize with javascript class name
+
+Locate an HTML tag into your html page.
+
+```html
+<div id="simpleuploader"></div>
+```
+
+Create a javascript instance
+```javascript
+var uploader = new SimpleUpload(options, '#simpleuploader');
 ```
 
 ### Get SimpleUpload object (after initialization)
