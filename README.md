@@ -159,7 +159,7 @@ Default is 10MB.
 
 ```javascript
 $('#simpleuploader').simpleupload({
-  fileMaxSize: 2 * 2048 // 2MB
+  fileMaxSize: 2 * 1024 * 1024 // 2MB
 });
 ```
 
